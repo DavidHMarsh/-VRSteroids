@@ -1,0 +1,11 @@
+﻿Scores system:
+
+At the start of the game scene, create a new player profile and assign it to the static value.
+
+During scene, record stats and time.  Should we move time to another object entirely?  No.  Lifetime should be recorded on player and added to score screen.
+
+After scene, enter ID and show stats.
+
+Display Score screen.
+
+Restart.

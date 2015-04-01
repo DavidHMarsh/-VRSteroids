@@ -1,0 +1,14 @@
+Player Ship desired statistics:
+
+Maximum speed: 25
+maximum acceleration: 20
+Booster acceleration: 25
+brake acceleration -0.1
+Turn speed: 240
+Natural Deccelerationb: 0.005
+DriftDecceleration: 0.1
+Player View Vector Theshold min: .4
+Player View Vector Threshold max: 1.1
+
+
+Stardust Particle
