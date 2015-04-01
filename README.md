@@ -1,2 +1,2 @@
 # VRSteroids
-A VR Game by David Marsh and David Nishball
+A Unity VR Game by David Marsh and David Nishball
