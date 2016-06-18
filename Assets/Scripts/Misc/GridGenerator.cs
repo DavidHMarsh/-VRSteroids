@@ -27,13 +27,13 @@ public class GridGenerator : MonoBehaviour
         {
 
             SpriteRenderer _spriteRenderer = _sizeObject.GetComponent<SpriteRenderer>();
-            if (_sizeObject.collider != null)
+            if (_sizeObject.GetComponent<Collider>() != null)
             {
                 // TODO make the collider bounds work for a prefab;
-                Debug.Log("Collider found on target object " + _sizeObject.name + " With bounds of " + _sizeObject.collider.bounds.size.ToString());
+                Debug.Log("Collider found on target object " + _sizeObject.name + " With bounds of " + _sizeObject.GetComponent<Collider>().bounds.size.ToString());
 
-                _spaceDimension.x = _sizeObject.collider.bounds.size.x;
-                _spaceDimension.y = _sizeObject.collider.bounds.size.y;
+                _spaceDimension.x = _sizeObject.GetComponent<Collider>().bounds.size.x;
+                _spaceDimension.y = _sizeObject.GetComponent<Collider>().bounds.size.y;
             }
             else if (_spriteRenderer != null)
             {

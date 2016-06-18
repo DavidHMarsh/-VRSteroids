@@ -30,7 +30,7 @@ public class NameEntryButtonManager : MonoBehaviour {
             _newButton.name = _char.ToString();
             _newButton.GetComponentInChildren<Text>().text = _char.ToString();
             
-            dimensionsOfPrefab = _newButton.collider.bounds.size;
+            dimensionsOfPrefab = _newButton.GetComponent<Collider>().bounds.size;
 
             _newButton.GetComponent<RectTransform>().localPosition +=  Vector3.Scale( _coordinateList[_instantiatedButtons], _newButton.transform.localScale);
 
@@ -49,7 +49,7 @@ public class NameEntryButtonManager : MonoBehaviour {
         _newButton = (Instantiate(deleteButtonPrefab.gameObject) as GameObject).GetComponent<Button>();
         _newButton.transform.SetParent(this.transform, false);
 
-        dimensionsOfPrefab = _newButton.collider.bounds.size;
+        dimensionsOfPrefab = _newButton.GetComponent<Collider>().bounds.size;
         _newButton.GetComponent<RectTransform>().localPosition += Vector3.Scale(_coordinateList[_instantiatedButtons], _newButton.transform.localScale);
 
         NameEntryButton _deleteComponent = _newButton.GetComponent<NameEntryButton>();

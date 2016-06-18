@@ -29,6 +29,6 @@ public class PlayMusicOnAwake : MonoBehaviour {
 
     void Start()
     {
-        audio.Play();
+        GetComponent<AudioSource>().Play();
     }
 }

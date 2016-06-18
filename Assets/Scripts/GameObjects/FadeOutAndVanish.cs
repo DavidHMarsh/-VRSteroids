@@ -14,9 +14,9 @@ public class FadeOutAndVanish : MonoBehaviour {
     {
         expireTime = Time.time + duration;
 
-        if (gameObject.renderer != null && gameObject.renderer.material != null)
+        if (gameObject.GetComponent<Renderer>() != null && gameObject.GetComponent<Renderer>().material != null)
         {
-            materialFading = gameObject.renderer.material;
+            materialFading = gameObject.GetComponent<Renderer>().material;
             startAlpha = materialFading.color.a;
         }
 
@@ -25,13 +25,13 @@ public class FadeOutAndVanish : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (gameObject.renderer.material != null)
+        if (gameObject.GetComponent<Renderer>().material != null)
         {
-            Color c = gameObject.renderer.material.color;
+            Color c = gameObject.GetComponent<Renderer>().material.color;
             float newAlpha = startAlpha * (expireTime - Time.time) / duration;
             
 
-            gameObject.renderer.material.color = new Color(c.r, c.g, c.b, newAlpha);
+            gameObject.GetComponent<Renderer>().material.color = new Color(c.r, c.g, c.b, newAlpha);
             //Debug.Log(gameObject.renderer.material.color.ToString());
         }
 

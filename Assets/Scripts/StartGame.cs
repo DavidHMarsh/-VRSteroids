@@ -7,7 +7,7 @@ public class StartGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 			#if UNITY_STANDALONE_WIN
-			Screen.showCursor = false;
+			Cursor.visible = false;
 			#endif
 	}
 	
@@ -27,12 +27,12 @@ public class StartGame : MonoBehaviour {
 			bCursorUnlocked = !bCursorUnlocked;
 			if(bCursorUnlocked)
 			{
-				Screen.showCursor = true;
+				Cursor.visible = true;
 				Screen.lockCursor = false;
 			}
 			else
 			{
-				Screen.showCursor = false;
+				Cursor.visible = false;
 			}
 		}
 	}

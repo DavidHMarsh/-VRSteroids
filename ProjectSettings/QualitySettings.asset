@@ -14,12 +14,16 @@ QualitySettings:
     shadowProjection: 1
     shadowCascades: 4
     shadowDistance: 150
+    shadowCascade2Split: .333333343
+    shadowCascade4Split: {x: .0666666701, y: .200000003, z: .466666669}
     blendWeights: 2
     textureQuality: 0
     anisotropicTextures: 2
     antiAliasing: 0
     softParticles: 0
     softVegetation: 1
+    realtimeReflectionProbes: 0
+    billboardsFaceCameraPosition: 0
     vSyncCount: 1
     lodBias: 2
     maximumLODLevel: 0
@@ -34,12 +38,16 @@ QualitySettings:
     shadowProjection: 1
     shadowCascades: 4
     shadowDistance: 150
+    shadowCascade2Split: .333333343
+    shadowCascade4Split: {x: .0666666701, y: .199999988, z: .466666639}
     blendWeights: 2
     textureQuality: 0
     anisotropicTextures: 2
     antiAliasing: 0
     softParticles: 0
     softVegetation: 1
+    realtimeReflectionProbes: 0
+    billboardsFaceCameraPosition: 0
     vSyncCount: 0
     lodBias: 2
     maximumLODLevel: 0
@@ -59,5 +67,6 @@ QualitySettings:
     Standalone: 0
     WP8: 0
     Web: 0
+    WebGL: 0
     Windows Store Apps: 0
     iPhone: 0

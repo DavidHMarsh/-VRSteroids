@@ -19,9 +19,9 @@ public class DebugButton : MonoBehaviour {
 
     public void FitColliderToButtonVisuals()
     {
-        if (collider != null && collider is BoxCollider)
+        if (GetComponent<Collider>() != null && GetComponent<Collider>() is BoxCollider)
         {
-            BoxCollider _boxCollider = collider as BoxCollider;
+            BoxCollider _boxCollider = GetComponent<Collider>() as BoxCollider;
 
             Vector2 _buttonSize = (Vector3)(GetComponent<UnityEngine.UI.Button>().transform as RectTransform).sizeDelta;
 

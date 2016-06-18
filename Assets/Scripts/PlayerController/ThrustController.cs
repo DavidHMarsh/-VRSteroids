@@ -70,14 +70,14 @@ public class ThrustController : MonoBehaviour, IShipControl {
 
             // Turning component reduces lateral drift
             float fUpSpeed, fRightSpeed;
-            fUpSpeed = Vector3.Dot(rigidbody.velocity, ThrusterTransform.up);
-            fRightSpeed = Vector3.Dot(rigidbody.velocity, ThrusterTransform.right);
+            fUpSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, ThrusterTransform.up);
+            fRightSpeed = Vector3.Dot(GetComponent<Rigidbody>().velocity, ThrusterTransform.right);
 
             desiredForce = desiredForce - TurningThrust * fUpSpeed * ThrusterTransform.up;
             desiredForce = desiredForce - TurningThrust * fRightSpeed * ThrusterTransform.right;
             
 
-            rigidbody.AddForce(desiredForce);
+            GetComponent<Rigidbody>().AddForce(desiredForce);
 			
    
             
@@ -85,14 +85,14 @@ public class ThrustController : MonoBehaviour, IShipControl {
         else
         {
             // Decelerate
-            rigidbody.AddForce(-1 * rigidbody.velocity * DragCoefficient , ForceMode.Acceleration);
+            GetComponent<Rigidbody>().AddForce(-1 * GetComponent<Rigidbody>().velocity * DragCoefficient , ForceMode.Acceleration);
         }
 
         // Clamp velocity
-        if (this.rigidbody.velocity.magnitude > maximumSpeed)
+        if (this.GetComponent<Rigidbody>().velocity.magnitude > maximumSpeed)
         {
-            float fOverSpeedRatio = this.rigidbody.velocity.magnitude / maximumSpeed;
-            this.rigidbody.velocity = this.rigidbody.velocity / fOverSpeedRatio;
+            float fOverSpeedRatio = this.GetComponent<Rigidbody>().velocity.magnitude / maximumSpeed;
+            this.GetComponent<Rigidbody>().velocity = this.GetComponent<Rigidbody>().velocity / fOverSpeedRatio;
 
         }
 	}

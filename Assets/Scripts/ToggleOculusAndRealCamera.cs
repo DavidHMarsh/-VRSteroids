@@ -46,17 +46,17 @@ public class ToggleOculusAndRealCamera : MonoBehaviour
             _newCamera.fieldOfView = _foundRig.leftEyeCamera.fieldOfView;
         }
 
-        StereoController _stereoCamera = FindObjectOfType<StereoController>();
+        //StereoController _stereoCamera = FindObjectOfType<StereoController>();
 
-        if (_stereoCamera != null)
-        {
-            Debug.Log("Found stereo camera", _stereoCamera);
-            _stereoCamera.enabled = false;
-        }
-        else
-        {
-            Debug.Log("no stereo camera found");
-        }
+        //if (_stereoCamera != null)
+        //{
+        //    Debug.Log("Found stereo camera", _stereoCamera);
+        //    _stereoCamera.enabled = false;
+        //}
+        //else
+        //{
+        //    Debug.Log("no stereo camera found");
+        //}
     }
 #endif
 }

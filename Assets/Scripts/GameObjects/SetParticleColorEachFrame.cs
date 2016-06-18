@@ -19,6 +19,6 @@ public class SetParticleColorEachFrame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        particleSystem.startColor = animatedColor;
+        GetComponent<ParticleSystem>().startColor = animatedColor;
 	}
 }

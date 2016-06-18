@@ -61,9 +61,9 @@ public class AsteroidObject : MonoBehaviour {
             }
             
             // Play sound
-            if (audio != null)
+            if (GetComponent<AudioSource>() != null)
             {
-                audio.Play();
+                GetComponent<AudioSource>().Play();
                 //AudioSource.PlayClipAtPoint(clip, position);
             }
 
@@ -99,8 +99,8 @@ public class AsteroidObject : MonoBehaviour {
                    
                     gFragmentAsteroid = Instantiate(FRAGMENT_ASTEROIDS[i], vSpawnLocation, transform.rotation) as GameObject;
 
-                    gFragmentAsteroid.rigidbody.velocity = fragmentSpeed * vOffset + rigidbody.velocity;
-                    gFragmentAsteroid.rigidbody.angularVelocity = 4 * Random.onUnitSphere;
+                    gFragmentAsteroid.GetComponent<Rigidbody>().velocity = fragmentSpeed * vOffset + GetComponent<Rigidbody>().velocity;
+                    gFragmentAsteroid.GetComponent<Rigidbody>().angularVelocity = 4 * Random.onUnitSphere;
                 }
             }
 

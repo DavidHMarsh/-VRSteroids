@@ -19,12 +19,12 @@ public class DebugGenerateDebris : MonoBehaviour {
             Vector3 vSpawn = (radius - safeRadius) * Random.insideUnitSphere + safeRadius * Random.onUnitSphere + originPoint;
 			
             GameObject newDebris = Instantiate(debrisPrefab, vSpawn, Random.rotation) as GameObject;
-            if (newDebris.renderer != null && newDebris.renderer.material != null)
+            if (newDebris.GetComponent<Renderer>() != null && newDebris.GetComponent<Renderer>().material != null)
             {
-                newDebris.renderer.material.color = new Color(Random.value, Random.value, Random.value);
+                newDebris.GetComponent<Renderer>().material.color = new Color(Random.value, Random.value, Random.value);
             }
 
-            newDebris.rigidbody.velocity = Random.onUnitSphere * initialSpeed;
+            newDebris.GetComponent<Rigidbody>().velocity = Random.onUnitSphere * initialSpeed;
 
         }
         
